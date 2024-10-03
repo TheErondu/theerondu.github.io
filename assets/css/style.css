@@ -968,7 +968,7 @@ body {
 #hire p {
 	width: 30em;
 	max-width: 100%;
-	font-family:cursive;
+	font-family:inherit;
 	font-size: large;
 }
 
