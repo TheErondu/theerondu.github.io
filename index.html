@@ -536,7 +536,7 @@
 					<li><a href="https://www.linkedin.com/in/nuel0/"><i class="fa fa-linkedin"></i></a></li>
 					<li><a href="https://www.hackerrank.com/profile/erone007"><i class="fa fa-hackerank"></i></a></li>
 				</ul>
-				<p>© 2021 Erondu Emmanuel</p>
+				<p>© <span id="attr"></span> Erondu Emmanuel</p>
 			</div>
 
 		</div>
@@ -568,6 +568,13 @@
 
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
+	<script>
+
+		let currentYear = document.getElementById('attr');
+		currentYear.innerHTML = new Date().getFullYear();
+
+
+	</script>
 
 </body>
 
