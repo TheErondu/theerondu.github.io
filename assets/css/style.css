@@ -322,6 +322,9 @@ section {
   #navigation.nav-bg .nav-container { padding: 14px 24px; }
 
   /* Bootstrap 3 collapse uses height animation — don't use display:none */
+  /* But our global display:flex overrides Bootstrap's display:none, so fix that here */
+  .nav-menu.collapse:not(.in) { display: none; }
+
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -332,7 +335,7 @@ section {
     padding: 0 24px;
     overflow: hidden;
   }
-  .nav-menu.in { padding: 16px 24px 24px; }
+  .nav-menu.in { display: block; padding: 16px 24px 24px; }
 
   .nav-list { flex-direction: column; align-items: flex-start; gap: 2px; }
   .nav-link { width: 100%; display: block; padding: 10px 12px; }
