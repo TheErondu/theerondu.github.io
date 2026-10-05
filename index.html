@@ -1,551 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <!-- Replaced by `flutter build web --base-href`. -->
+  <base href="/">
+
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="ootDxYjotCW8uPE6pws7Np7mOCpHvtSzzq25vuBj3L8" />
-  <title>Emmanuel Erondu - Senior Software Engineer</title>
-  <link rel="icon" href="assets/img/blog/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <title>Emmanuel Erondu – Senior Software Engineer</title>
+  <meta name="description" content="Emmanuel Erondu is a Senior Software Engineer in Lagos building cross-platform apps and backend systems with Flutter, Dart, C#, PHP, JavaScript, Firebase and AWS.">
+  <meta name="author" content="Emmanuel Erondu">
+  <meta name="theme-color" content="#121c2e">
 
-  <meta property="og:title" content="Emmanuel Erondu - Portfolio">
-  <meta property="og:image" content="https://raw.githubusercontent.com/TheErondu/Portfolio/master/assets/img/blog/neo.jpg">
+  <!-- Link previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Emmanuel Erondu – Senior Software Engineer">
+  <meta property="og:description" content="I build software that actually works. Flutter, Dart, C#, PHP, JavaScript, Firebase, AWS.">
   <meta property="og:url" content="https://theerondu.github.io/">
-  <meta property="og:description" content="Senior Software Engineer and IT Team Lead with 6+ years building cross-platform apps and robust backend systems.">
+  <meta property="og:image" content="https://theerondu.github.io/assets/assets/portfolio/profile.jpg">
+  <meta name="twitter:card" content="summary">
 
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/flexslider.css">
-  <link rel="stylesheet" href="assets/css/aos.css">
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Erondu">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="manifest" href="manifest.json">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Matches the app's dark background so there is no white flash while
+       Flutter loads. */
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: linear-gradient(#2a2f55, #121c2e);
+      color: #fff;
+      font-family: system-ui, "Segoe UI", sans-serif;
+    }
+    noscript { display: block; max-width: 640px; margin: 0 auto; padding: 48px 24px; line-height: 1.6; }
+    noscript a { color: #fff; }
+  </style>
 </head>
-
 <body>
-
-  <!-- Scroll progress -->
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Custom cursor -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- Background orbs -->
-  <div class="bg-orbs" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-
-  <div class="svg hide" id="svg"></div>
-
-  <!-- NAVIGATION -->
-  <nav id="navigation">
-    <div class="nav-container">
-      <div class="nav-brand">
-        <a href="#home" class="smoth-scroll">EE<span class="brand-dot">.</span></a>
-      </div>
-
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      <div class="navbar-collapse collapse nav-menu">
-        <ul class="nav-list">
-          <li><a href="#home"         class="nav-link smoth-scroll" style="--i:0">Home</a></li>
-          <li><a href="#about"        class="nav-link smoth-scroll" style="--i:1">About</a></li>
-          <li><a href="#skills"       class="nav-link smoth-scroll" style="--i:2">Skills</a></li>
-          <li><a href="#portfolio"    class="nav-link smoth-scroll" style="--i:3">Work</a></li>
-          <li><a href="#contact"      class="nav-link nav-cta smoth-scroll" style="--i:4">Let's Talk</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="home">
-    <div class="hero-bg" style="background-image: url('assets/img/blog/bgwall.webp')"></div>
-    <div class="hero-vignette"></div>
-    <div class="hero-content">
-      <div class="hero-glass" data-aos="fade-up" data-aos-duration="900">
-        <div class="hero-avatar">
-          <img src="assets/img/blog/neo.jpg" alt="Emmanuel Erondu">
-          <div class="avatar-glow-ring"></div>
-          <div class="avatar-orbit"></div>
-        </div>
-        <p class="hero-location">Lagos, Nigeria</p>
-        <h1 class="hero-name">
-          <span class="name-first">Emmanuel</span>
-          <span class="name-last">Erondu</span>
-        </h1>
-        <p class="hero-tagline">I build software that actually works.</p>
-        <div class="hero-role-line">
-          <div id="text-rotator" class="hero-role">
-            <div>Full Stack Software Developer</div>
-            <div>Mobile App Developer</div>
-            <div>Systems Administrator</div>
-            <div>DevOps Engineer</div>
-          </div>
-        </div>
-        <div class="hero-actions">
-          <a href="#portfolio" class="btn-primary-hero smoth-scroll">See My Work</a>
-          <a href="erondu_emmanuel_software_engineer_cv.pdf" class="btn-ghost-hero" download>
-            Resume <i class="fa fa-download"></i>
-          </a>
-        </div>
-      </div>
-      <a href="#about" class="hero-scroll-hint smoth-scroll">
-        <i class="fa fa-angle-down arrow"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <p class="section-eyebrow" data-aos="fade-right">01 / About</p>
-      <div class="about-grid">
-        <div class="about-left" data-aos="fade-right" data-aos-delay="80">
-          <h2 class="section-title">A little <span class="text-accent">about</span> me.</h2>
-          <p class="about-bio">
-            I'm a Senior Software Engineer based in Lagos with <strong>6+ years</strong> building
-            cross-platform apps and backend systems. Flutter, Dart, C#, PHP, JavaScript, Firebase, AWS
-            - I've shipped real products across all of them. I care about code that's clean, fast, and
-            actually solves the problem.
-          </p>
-          <div class="about-roles">
-            <div class="role-row">
-              <span class="role-badge">Team Lead, IT Support</span>
-              <a href="https://newscentraltv.com" class="role-company accent-link" target="_blank">NewsCentral Television</a>
-            </div>
-            <div class="role-row">
-              <span class="role-badge">Mobile Software Engineering Consultant</span>
-              <a href="https://first-allyasset.com/" class="role-company accent-link" target="_blank">First Ally Capital</a>
-            </div>
-            <div class="role-row">
-              <span class="role-badge">Co Founder</span>
-              <a href="https://petorbit.org" class="role-company accent-link" target="_blank">PetOrbit</a>
-            </div>
-          </div>
-          <div class="social-pills">
-            <a href="https://www.instagram.com/TheErondu/" class="pill" target="_blank"><i class="fa fa-instagram"></i> Instagram</a>
-            <a href="https://github.com/TheErondu" class="pill" target="_blank"><i class="fa fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/nuel0/" class="pill" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
-            <a href="https://www.hackerrank.com/profile/erone007" class="pill" target="_blank"><i class="fa fa-code"></i> HackerRank</a>
-          </div>
-          <a href="erondu_emmanuel_software_engineer_cv.pdf" class="btn-resume" download>
-            Download Resume <i class="fa fa-download"></i>
-          </a>
-        </div>
-
-        <div class="about-right" data-aos="fade-left" data-aos-delay="160">
-          <div class="stats-grid">
-            <div class="stat-card glass-card">
-              <span class="stat-number">6+</span>
-              <span class="stat-label">Years in</span>
-              <span class="stat-label">the field</span>
-            </div>
-            <div class="stat-card glass-card">
-              <span class="stat-number">10+</span>
-              <span class="stat-label">Products</span>
-              <span class="stat-label">shipped</span>
-            </div>
-            <div class="stat-card stat-wide glass-card">
-              <span class="stat-number">3</span>
-              <span class="stat-label">Active roles across tech, consulting and founding</span>
-            </div>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <p class="section-eyebrow" data-aos="fade-right">02 / Skills</p>
-      <h2 class="section-title" data-aos="fade-up">What I reach for.</h2>
-      <div class="skills-grid" data-aos="fade-up" data-aos-delay="80">
-
-        <div class="skill-card glass-card">
-          <div class="skill-card-header">
-            <i class="fa fa-mobile"></i>
-            <span>Mobile</span>
-          </div>
-          <div class="chips">
-            <span class="chip chip-hot">Flutter</span>
-            <span class="chip chip-hot">Dart</span>
-            <span class="chip chip-cool">React Native</span>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card">
-          <div class="skill-card-header">
-            <i class="fa fa-code"></i>
-            <span>Backend &amp; Web</span>
-          </div>
-          <div class="chips">
-            <span class="chip chip-hot">C# / ASP.Net</span>
-            <span class="chip chip-hot">Laravel / PHP</span>
-            <span class="chip chip-cool">JavaScript</span>
-            <span class="chip chip-cool">SQL</span>
-            <span class="chip chip-cool">Firebase</span>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card">
-          <div class="skill-card-header">
-            <i class="fa fa-cloud"></i>
-            <span>Cloud &amp; DevOps</span>
-          </div>
-          <div class="chips">
-            <span class="chip chip-hot">Docker</span>
-            <span class="chip chip-cool">AWS</span>
-            <span class="chip chip-cool">Azure</span>
-            <span class="chip chip-cool">Google Cloud</span>
-            <span class="chip chip-cool">CI/CD</span>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card">
-          <div class="skill-card-header">
-            <i class="fa fa-wrench"></i>
-            <span>Tools &amp; Workflow</span>
-          </div>
-          <div class="chips">
-            <span class="chip chip-cool">Git</span>
-            <span class="chip chip-cool">Jira</span>
-            <span class="chip chip-cool">Slack</span>
-            <span class="chip chip-cool">REST APIs</span>
-            <span class="chip chip-cool">Zoom</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
-    <div class="container">
-      <p class="section-eyebrow" data-aos="fade-right">03 / Work</p>
-      <h2 class="section-title" data-aos="fade-up">Stuff I've shipped.</h2>
-
-      <div class="filter-bar" data-aos="fade-up" data-aos-delay="60">
-        <div class="filter active" data-filter="all">All</div>
-        <div class="filter" data-filter=".website">Website</div>
-        <div class="filter" data-filter=".app">App</div>
-        <div class="filter" data-filter=".desktop">Desktop</div>
-      </div>
-
-      <div id="port-image" class="projects-grid">
-
-        <div class="project-card glass-card app mix" data-aos="fade-up">
-          <div class="project-img-wrap">
-            <img src="assets/img/projects/petorbit-preview.webp" alt="Petorbit">
-            <div class="project-hover-overlay">
-              <a href="assets/img/projects/petorbit-preview.webp" class="overlay-btn image-popup" title="Petorbit"><i class="fa fa-expand"></i></a>
-              <a href="https://petorbit.org" target="_blank" class="overlay-btn overlay-external"><i class="fa fa-external-link"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="proj-tag tag-web">Website</span>
-            <h3 class="proj-title">Petorbit</h3>
-            <p class="proj-desc">I am current building: PetOrbit A Pet care hub that Consolidates Everything your pet needs and everyone who cares, into a single platform.</p>
-            <a href="https://petorbit.org" target="_blank" class="proj-cta">Visit Petorbit.org <i class="fa fa-long-arrow-right"></i></a>
-          </div>
-        </div>
-
-        <div class="project-card glass-card app mix" data-aos="fade-up" data-aos-delay="60">
-          <div class="project-img-wrap">
-            <img src="assets/img/projects/myinvestar.jpg" alt="MyInvestar App">
-            <div class="project-hover-overlay">
-              <a href="assets/img/projects/myinvestar.jpg" class="overlay-btn image-popup" title="MyInvestar"><i class="fa fa-expand"></i></a>
-              <a href="https://myinvestar.ng" target="_blank" class="overlay-btn overlay-external"><i class="fa fa-external-link"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="proj-tag tag-app">App</span>
-            <h3 class="proj-title">MyInvestar</h3>
-            <p class="proj-desc">Digital wealth management for Nigerians - track, grow, and protect your investments in one place.</p>
-            <a href="https://myinvestar.ng" target="_blank" class="proj-cta">Visit Live Site <i class="fa fa-long-arrow-right"></i></a>
-          </div>
-         
-        </div>
-
-        <div class="project-card glass-card website mix" data-aos="fade-up" data-aos-delay="120">
-        <div class="project-img-wrap">
-            <img src="assets/img/projects/onidemode.webp" alt="Onidemode Game Show">
-            <div class="project-hover-overlay">
-              <a href="assets/img/projects/onidemode.webp" class="overlay-btn image-popup" title="Onidemode Game Show"><i class="fa fa-expand"></i></a>
-              <a href="https://onidemodegameshow.com" target="_blank" class="overlay-btn overlay-external"><i class="fa fa-external-link"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="proj-tag tag-web">Website</span>
-            <h3 class="proj-title">Onidemode Game Show</h3>
-            <p class="proj-desc">Online Yoruba trivia game show - think Who Wants to Be a Millionaire, but in Yoruba.</p>
-            <a href="https://onidemodegameshow.com" target="_blank" class="proj-cta">Visit Live Site <i class="fa fa-long-arrow-right"></i></a>
-          </div>
-        </div>
-
-        <div class="project-card glass-card website mix" data-aos="fade-up" data-aos-delay="60">
-          <div class="project-img-wrap">
-            <img src="assets/img/projects/casualqueen-vid.webp" alt="Casual Queen Fashion Store">
-            <div class="project-hover-overlay">
-              <a href="assets/img/projects/casualqueen-vid.webp" class="overlay-btn image-popup" title="Casual Queen Fashion Store"><i class="fa fa-expand"></i></a>
-              <a href="https://casualqueen.ng" target="_blank" class="overlay-btn overlay-external"><i class="fa fa-external-link"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="proj-tag tag-web">Website</span>
-            <h3 class="proj-title">Casual Queen Fashion Store</h3>
-            <p class="proj-desc">E-commerce storefront for a Lagos fashion brand - fast, mobile-first, built to convert.</p>
-            <a href="https://casualqueen.ng" target="_blank" class="proj-cta">Visit Live Site <i class="fa fa-long-arrow-right"></i></a>
-          </div>
-        </div>
-
-        <div class="project-card glass-card website mix" data-aos="fade-up" data-aos-delay="120">
-            <div class="project-img-wrap">
-            <img src="assets/img/projects/brave-vid.webp" alt="Brave Media Asset Management">
-            <div class="project-hover-overlay">
-              <a href="assets/img/projects/brave-vid.webp" class="overlay-btn image-popup" title="Brave Media Asset Management"><i class="fa fa-expand"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="proj-tag tag-web">Website</span>
-            <h3 class="proj-title">Brave Media Asset Management</h3>
-            <p class="proj-desc">Internal platform for organising and distributing broadcast content at scale.</p>
-            <span class="proj-cta proj-private">Private Project</span>
-          </div>
-          
-        </div>
-
-        <div class="project-card glass-card website mix" data-aos="fade-up" data-aos-delay="60">
-           <div class="project-img-wrap">
-            <img src="assets/img/projects/divine-connection-vid.webp" alt="Divine Connection App">
-            <div class="project-hover-overlay">
-              <a href="assets/img/projects/divine-connection-vid.webp" class="overlay-btn image-popup" title="Divine Connection"><i class="fa fa-expand"></i></a>
-              <a href="https://theencouragers.org/divine-connection/" target="_blank" class="overlay-btn overlay-external"><i class="fa fa-external-link"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="proj-tag tag-app">App</span>
-            <h3 class="proj-title">Divine Connection</h3>
-            <p class="proj-desc">Helping Christian singles find meaningful, God-centered relationships that lead to marriage.</p>
-            <a href="https://theencouragers.org/divine-connection/" target="_blank" class="proj-cta">Check it out <i class="fa fa-long-arrow-right"></i></a>
-          </div>
-        </div>
-
-        <div class="project-card glass-card desktop mix" data-aos="fade-up">
-          <div class="project-img-wrap">
-            <img src="assets/img/projects/onidemode-demo.webp" alt="Quiz Game Show Software">
-            <div class="project-hover-overlay">
-              <a href="assets/img/projects/onidemode-demo.webp" class="overlay-btn image-popup" title="Quiz Game Show Software"><i class="fa fa-expand"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="proj-tag tag-desktop">Desktop</span>
-            <h3 class="proj-title">Quiz Game Show Software</h3>
-            <p class="proj-desc">Built a Who wants to be a millionaire type game show software for Onidemode game show</p>
-            <span class="proj-cta proj-private">Private Build</span>
-          </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- HIRE -->
-  <section id="hire">
-    <div class="hire-band">
-      <div class="container">
-        <div class="hire-glass glass-card" data-aos="fade-up">
-          <div class="hire-text">
-            <p class="hire-eyebrow">Open to new projects</p>
-            <h2>Got a project?<br><span class="text-accent">Let's go.</span></h2>
-            <p class="hire-body">
-              I'm remote-ready with a solid home setup. I stay communicative, work well with distributed teams,
-              and bring structure to async workflows. Slack, JIRA, Zoom - no problem.
-            </p>
-          </div>
-          <a href="#contact" class="btn-hire smoth-scroll">
-            Start the conversation <i class="fa fa-long-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATES -->
-  <section id="certificates">
-    <div class="container">
-      <p class="section-eyebrow" data-aos="fade-right">04 / Credentials</p>
-      <h2 class="section-title" data-aos="fade-up">Earned along<br>the way.</h2>
-      <div class="certs-grid" data-aos="fade-up" data-aos-delay="80">
-
-        <div class="cert-card glass-card">
-          <a href="assets/img/certificates/andela.jpeg" class="image-popup">
-            <img src="assets/img/certificates/andela.jpeg" alt="Andela Certificate">
-            <div class="cert-overlay-icon"><i class="fa fa-expand"></i></div>
-          </a>
-        </div>
-
-        <div class="cert-card glass-card">
-          <a href="assets/img/certificates/poA.jpeg" class="image-popup">
-            <img src="assets/img/certificates/poA.jpeg" alt="Certificate">
-            <div class="cert-overlay-icon"><i class="fa fa-expand"></i></div>
-          </a>
-        </div>
-
-        <div class="cert-card glass-card">
-          <a href="assets/img/certificates/Leishton-cert.webp" class="image-popup">
-            <img src="assets/img/certificates/Leishton-cert.webp" alt="Leishton Certificate">
-            <div class="cert-overlay-icon"><i class="fa fa-expand"></i></div>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <p class="section-eyebrow" data-aos="fade-right">05 / Contact</p>
-      <h2 class="section-title" data-aos="fade-up">Let's<br>talk.</h2>
-      <div class="contact-grid">
-
-        <div class="contact-info" data-aos="fade-right" data-aos-delay="80">
-          <p class="contact-intro">Shoot me a message. I actually reply.</p>
-          <div class="contact-items">
-            <div class="contact-item glass-card">
-              <div class="contact-icon-box"><i class="fa fa-envelope"></i></div>
-              <div class="contact-detail">
-                <span class="detail-label">Email</span>
-                <a href="mailto:erondue@yahoo.com" class="detail-value">erondue@yahoo.com</a>
-              </div>
-            </div>
-            <div class="contact-item glass-card">
-              <div class="contact-icon-box"><i class="fa fa-map-marker"></i></div>
-              <div class="contact-detail">
-                <span class="detail-label">Location</span>
-                <span class="detail-value">Ogba, Ikeja, Lagos, Nigeria</span>
-              </div>
-            </div>
-            <div class="contact-item glass-card">
-              <div class="contact-icon-box"><i class="fa fa-phone"></i></div>
-              <div class="contact-detail">
-                <span class="detail-label">Phone</span>
-                <a href="tel:+2348166289825" class="detail-value">+234 816 628 9825</a>
-              </div>
-            </div>
-          </div>
-          <div class="contact-social-row">
-            <a href="https://www.instagram.com/TheErondu/" class="contact-social-link glass-card" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
-            <a href="https://github.com/TheErondu" class="contact-social-link glass-card" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/nuel0/" class="contact-social-link glass-card" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-            <a href="https://www.hackerrank.com/profile/erone007" class="contact-social-link glass-card" target="_blank" title="HackerRank"><i class="fa fa-code"></i></a>
-          </div>
-        </div>
-
-        <div class="reach-panel glass-card" data-aos="fade-left" data-aos-delay="160">
-          <p class="reach-intro">The fastest way to reach me is a direct message. I check both daily.</p>
-          <div class="reach-btns">
-            <a href="https://wa.me/2348166289825" target="_blank" class="reach-btn reach-btn-whatsapp">
-              <div class="reach-btn-icon"><i class="fa fa-whatsapp"></i></div>
-              <div>
-                <span class="reach-btn-label">Chat on WhatsApp</span>
-                <span class="reach-btn-sub">+234 816 628 9825</span>
-              </div>
-            </a>
-            <a href="https://t.me/TheErondu" target="_blank" class="reach-btn reach-btn-telegram">
-              <div class="reach-btn-icon"><i class="fa fa-telegram"></i></div>
-              <div>
-                <span class="reach-btn-label">Message on Telegram</span>
-                <span class="reach-btn-sub">@TheErondu</span>
-              </div>
-            </a>
-          </div>
-          <p class="reach-note">Prefer email? <a href="mailto:erondue@yahoo.com">erondue@yahoo.com</a></p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="footer">
-    <div class="container">
-      <div class="footer-row">
-        <div class="footer-brand">EE<span class="brand-dot">.</span></div>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/TheErondu/" target="_blank"><i class="fa fa-instagram"></i></a>
-          <a href="https://github.com/TheErondu" target="_blank"><i class="fa fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/nuel0/" target="_blank"><i class="fa fa-linkedin"></i></a>
-          <a href="https://www.hackerrank.com/profile/erone007" target="_blank"><i class="fa fa-code"></i></a>
-        </div>
-        <p class="footer-copy">&copy; <span id="attr"></span> Erondu Emmanuel. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"
-    integrity="sha512-srGxQe2w7s50+5/nNgEVKYtBm15zRylJwdjxYnGEZr3mmHFJKFjA/ImA2OKizVzoIDX8XISMHDI1+az9pnumbQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.stellar.min.js"></script>
-  <script src="assets/js/text-rotate.js"></script>
-  <script src="assets/js/numscroller.js"></script>
-  <script src="assets/js/jquery.appear.js"></script>
-  <script src="assets/js/progress-bar.min.js"></script>
-  <script src="assets/js/jquery.mixitup.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/magnific-popup-options.js"></script>
-  <script src="assets/js/jquery.flexslider-min.js"></script>
-  <script src="assets/js/aos.js"></script>
-  <script src="assets/js/jquery.form.js"></script>
-  <script src="assets/js/jquery.validate.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script>
-    document.getElementById('attr').textContent = new Date().getFullYear();
-
-    // Scroll progress bar
-    window.addEventListener('scroll', () => {
-      const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-      document.getElementById('scrollProgress').style.width = pct + '%';
-    });
-
-    // Custom cursor
-    const dot  = document.getElementById('cursorDot');
-    const ring = document.getElementById('cursorRing');
-    let ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
-    document.addEventListener('mousemove', e => {
-      mouseX = e.clientX; mouseY = e.clientY;
-      dot.style.left = mouseX + 'px';
-      dot.style.top  = mouseY + 'px';
-    });
-    (function animateRing() {
-      ringX += (mouseX - ringX) * 0.14;
-      ringY += (mouseY - ringY) * 0.14;
-      ring.style.left = ringX + 'px';
-      ring.style.top  = ringY + 'px';
-      requestAnimationFrame(animateRing);
-    })();
-    document.querySelectorAll('a, button, .filter, .chip').forEach(el => {
-      el.addEventListener('mouseenter', () => ring.classList.add('ring-hover'));
-      el.addEventListener('mouseleave', () => ring.classList.remove('ring-hover'));
-    });
-  </script>
-
+  <noscript>
+    <h1>Emmanuel Erondu</h1>
+    <p>Senior Software Engineer in Lagos, Nigeria. I build software that actually works:
+      6+ years of cross-platform apps and backend systems with Flutter, Dart, C#, PHP,
+      JavaScript, Firebase and AWS.</p>
+    <h2>Work</h2>
+    <ul>
+      <li><a href="https://petorbit.org">PetOrbit</a> – pet care hub</li>
+      <li><a href="https://myinvestar.ng">MyInvestar</a> – digital wealth management</li>
+      <li><a href="https://onidemodegameshow.com">Onidemode Game Show</a> – Yoruba trivia game show</li>
+      <li><a href="https://casualqueen.ng">Casual Queen</a> – fashion e-commerce</li>
+      <li><a href="https://theencouragers.org/divine-connection/">Divine Connection</a></li>
+    </ul>
+    <p><a href="erondu_emmanuel_software_engineer_cv.pdf">Download my CV</a> ·
+      <a href="mailto:erondue@yahoo.com">erondue@yahoo.com</a> ·
+      <a href="https://github.com/TheErondu">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/nuel0/">LinkedIn</a></p>
+    <p>This site needs JavaScript enabled.</p>
+  </noscript>
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
